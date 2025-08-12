@@ -1,0 +1,14 @@
+{
+  "name": "snoopy",
+  "scripts": {
+  "build": "esbuild src/main.js --bundle --minify --outfile=public/main-bundle.js",
+  "dev": "esbuild src/main.js --bundle --outfile=public/main-bundle.js --servedir=public",
+  "bundle": "npm run build && mkdir -p dist && zip -r dist/game.zip public -x \"**/.DS_Store\""
+},
+  "devDependencies": {
+    "esbuild": "^0.25.5"
+  },
+  "dependencies": {
+    "kaboom": "^3000.1.17"
+  }
+}
